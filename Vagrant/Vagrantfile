@@ -41,13 +41,21 @@ end
  end
 
 
-  config.vm.define "win2012" do |win2012|
+  config.vm.define "win10" do |win10|
+  config.vm.network :forwarded_port, guest: 3389, host: 33389, id: "rdp", auto_correct: true
+  
+  win10.vm.box = "win10"
+  win10.vm.guest = :windows
+  win10.vm.communicator = "winrm"
+  win10.vm.boot_timeout = 600
+  win10.vm.graceful_halt_timeout = 600
+  win10.vm.hostname = "win10"
+  win10.vm.network :private_network, ip: "172.31.0.204"
+  win10.hostmanager.aliases = %w(win10)
+  win10.vm.provision "shell", :path => "windows.ps1"
+  win10.vm.provision "shell", :path => "chocolatey.ps1"
+  win10.vm.provision "shell", :path => "dis-updates.ps1"
 
-  win2012.vm.box = "devopsguys/Windows2012R2Eval"
-  win2012.vm.hostname = "win2012.localhost"
-  win2012.vm.network :private_network, ip: "172.31.0.204"
-  win2012.hostmanager.aliases = %w(win2012)
-  win2012.vm.provision "shell", :path => "windows.ps1"
  end
 
   
