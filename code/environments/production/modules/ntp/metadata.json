@@ -1,12 +1,12 @@
 {
-  "name": "scayzer-ntp",
+  "name": "morningtonit-ntp",
   "version": "0.1.0",
-  "author": "scayzer",
-  "summary": "Simple NTP client module",
+  "author": "morningtonit",
+  "summary": "NTP Client module to demo puppet modules",
   "license": "Apache-2.0",
-  "source": "https://github.com/morningtonit/Puppet-Lessons",
+  "source": "https://github.com/morningtonit/Puppet-Lessons/tree/vagrantbootstrap",
   "project_page": "https://github.com/morningtonit/Puppet-Lessons/README.md",
-  "issues_url": "https://github.com/morningtonit/Puppet-Lessons/issues",
+  "issues_url": "https://github.com/morningtonit/Puppet-Lessons/tree/vagrantbootstrap/issues",
   "dependencies": [
     {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
   ],
