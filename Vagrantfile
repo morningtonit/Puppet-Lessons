@@ -52,8 +52,9 @@ end
   win701.hostmanager.aliases = %w(win701)
   win701.vm.hostname = "win701"
   win701.vm.provision "shell", :path => "chocolatey.ps1"
-  win701.vm.provision "shell", :path => "windows.ps1"
-end
+
+
+ end
 
   
   config.vm.define "puppet" do |puppet|
